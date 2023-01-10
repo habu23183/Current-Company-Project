@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dc_domestic invoice</title>
+    <link rel="stylesheet" href="/Poppins (1)/Poppins-ExtraBold.ttf">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #eee;
+        }
+        
+        table,
+        tr,
+        td {
+            margin: 0;
+        }
+        
+        main {
+            width: 60%;
+            margin: 5px auto 0;
+        }
+        
+        section {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 40px 80px;
+            margin-bottom: 10px;
+            width: 100%;
+            background-color: #fff;
+            display: inline-block;
+        }
+        
+        section .irn {
+            font-size: 12px;
+            font-weight: 900;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .section-2 {
+            padding: 30px 20px;
+        }
+        
+        section .img {
+            position: relative;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        section .qr-img {
+            position: absolute;
+            right: -30px;
+            top: 22px;
+        }
+        
+        .top_section h1 {
+            font-size: 18px;
+            font-weight: 900;
+            margin-bottom: 2px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .top_section span {
+            font-weight: 800;
+            font-size: 12px !important;
+        }
+        
+        .top_section div p {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        section .table {
+            width: 100%;
+            border: 1px solid #000;
+            height: auto;
+            padding: 6px;
+        }
+        
+        section .table .bld-text {
+            margin-left: 10px;
+            font-size: 12px !important;
+            margin-bottom: 0 !important;
+            line-height: 16px !important;
+            font-weight: 800 !important;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        section .table .normal-text {
+            margin-bottom: 12px;
+        }
+        
+        section .table p {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 2px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        section .table .mrg-btm {
+            margin-bottom: 0 !important;
+        }
+        
+        section .table .text-normal {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 2px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        section table {
+            border: 1px solid #000;
+            width: 100%;
+            margin-top: 2px;
+        }
+        
+        table.sample thead {
+            border-bottom: 1px solid #000;
+        }
+        
+        table.sample2 thead {
+            border: 1px solid #000;
+        }
+        
+        section table thead tr th {
+            padding: 6px 5px;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        section table tbody tr td {
+            padding: 6px 5px;
+            font-size: 12px;
+            vertical-align: top;
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        section table tfoot tr td {
+            padding: 6px 5px;
+            font-size: 12px;
+            vertical-align: top;
+            text-align: center;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        section table tfoot tr td:nth-child(2) {
+            font-weight: 500;
+            text-align: right;
+        }
+        
+        section table thead tr th:nth-child(3),
+        section table tbody tr td:nth-child(3) {
+            text-align: right;
+        }
+        
+        table.sample tfoot {
+            border-top: 1px solid black;
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        .details {
+            margin-top: 20px;
+        }
+        
+        .details table {
+            border: none;
+        }
+        
+        .details table tr td:nth-child(2) {
+            text-align: left;
+        }
+        
+        .details table tr td {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 0;
+            padding-bottom: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .details table tr td span {
+            font-weight: 700;
+        }
+        
+        .details h2 {
+            font-size: 12px;
+            text-decoration: underline;
+            font-weight: 900 !important;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .content {
+            margin-top: 40px;
+        }
+        
+        .content p {
+            font-size: 13px;
+            font-weight: 500;
+            padding: 0;
+            line-height: 18px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .query {
+            margin-top: 20px;
+        }
+        
+        .query p {
+            font-size: 13px;
+            font-weight: 500;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .generate {
+            margin: 20px 0 30px;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 0;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .cin {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .cin h2 {
+            font-size: 15px;
+            font-weight: 600;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .cin p {
+            font-size: 12px;
+            font-weight: 500;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .cin span {
+            font-size: 11px;
+            font-weight: 400;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .cin span b {
+            font-weight: 700 !important;
+        }
+        
+        .scale {
+            width: 100%;
+            height: 12px;
+            background: rgb(22, 80, 124);
+            background: linear-gradient(90deg, rgba(22, 80, 124, 1) 50%, rgba(255, 0, 0, 1) 50%);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+        
+        .section-2 h4 {
+            font-size: 11px;
+            font-weight: 800;
+            padding: 0;
+            margin-bottom: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .section-2>h2 {
+            font-size: 12px;
+            font-weight: 800;
+            padding: 0;
+            text-align: center;
+            margin-top: 7px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .section-2 div {
+            border: 1px solid #000 !important;
+        }
+        
+        .section-2 div table {
+            border: none;
+            margin-top: 0;
+        }
+        
+        .section-2 table thead {
+            border: none;
+            border-bottom: 1px solid #000;
+        }
+        
+        .section-2 table thead th {
+            font-size: 11px;
+            border: none;
+            padding: 8px 5px;
+            font-weight: 800;
+            text-align: left !important;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .section-2 table tbody td {
+            font-size: 11px;
+            text-align: left !important;
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .section-2 table thead th {
+            border-right: 1px solid #ccc;
+        }
+        
+        .section-2 table tbody td {
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .section-2 table th:last-child {
+            text-align: right!important;
+            border-right: none;
+        }
+        
+        .section-2 table tbody td:last-child {
+            text-align: right !important;
+            border-right: none;
+        }
+        
+        .section-2 .end-table {
+            border: none;
+        }
+        
+        .section-2 .end-table tr td {
+            text-align: right !important;
+            border: none !important;
+            font-weight: 700 !important;
+        }
+        
+        .section-2 .end-table tr:first-child {
+            border-bottom: 1px solid #000 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="img">
+                <img src="./logo.PNG" alt="">
+                <img src="./qr.PNG" alt="" class="qr-img">
+            </div>
+            <div class="top_section">
+                <h1> TAX INVOICE</h1>
+
+                <div>
+                    <p><span>GSTIN No: 06AAACT4542P1Z1</span></p>
+                    <p><span>PAN No. AAACT4542P</span></p>
+                    <p><span>Invoice No. :</span> UCS/2021/CR/2153</p>
+                    <p><span>Date. : 18-Oct-2022</span></p>
+
+                </div>
+            </div>
+            <h2 class="irn">IRN: 73584f74dae20c54931782326d7d79ec7a07929b0bbe5547ed8a6978e2149fe1</h2>
+            <div class="table">
+                <pre><p class="normal-text">To,</p><p class="bld-text">ABC LTD </p><p class="bld-text ">Address</p><p class="bld-text">GSTIN :</p><p class="bld-text">Place Of Supply -
+                </p></pre></div>
+            <table class="sample">
+                <thead>
+                    <tr>
+                        <th width='45%'>Matter </th>
+                        <th width='30%'>
+                            Description
+                        </th>
+
+                        <th width='25%'>Amount(USD)
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <div>
+                        <tr>
+                            <td width='45%'>ABC</td>
+                            <td width='30%'>
+                                1 Test 1 Description
+
+                            </td>
+
+                            <td width='25%'>INR 5000.00</td>
+                        </tr>
+                        <tr>
+                            <td width='45%'>VS</td>
+                            <td width='30%'>2 Test 2 Description
+                            </td>
+
+                            <td width='25%'>NR 5000.00</td>
+                        </tr>
+                    </div>
+                </tbody>
+
+                <tfoot>
+
+                    <tr>
+
+                        <td width='75%' colspan="2">
+                            Net Payable
+                        </td>
+
+                        <td width='25%'>USD 165,931.00
+                        </td>
+
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="details">
+                <h2><u><i>Please pay to the following bank account</i></u></h2>
+                <table>
+                    <tr>
+                        <td width='25%'>Our Bankers </td>
+                        <td width='75%'><span>Standard Chartered Bank</span></td>
+
+                    </tr>
+                    <tr>
+                        <td>Branch</td>
+                        <td>Karol Bagh, New Delhi, India</td>
+
+                    </tr>
+                    <tr>
+                        <td>Account Name</td>
+                        <td>Unified Credit Solutions Pvt Ltd</td>
+
+                    </tr>
+                    <tr>
+                        <td>Account No
+                        </td>
+                        <td>52905005550</td>
+
+                    </tr>
+                    <tr>
+                        <td>Swift Code</td>
+                        <td>SCBLINBBDEL</td>
+
+                    </tr>
+                    <tr>
+                        <td>NEFT/IFSC Code</td>
+                        <td>SCBL0036030</td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="content">
+                <p>Business Auxiliary Services / SAC : 998598 (Other Information Services n.e.c)
+                </p>
+
+                <p>Tax is Payable on Reverse Charge: No</p>
+            </div>
+            <div class="query">
+                <p>If you have any questions pertaining to this invoice: &emsp; &emsp; &emsp; &emsp; &emsp; Call : +91 124 471 9999 (Board) or Fax : +91 124 471 9951 or Email : creditreport@ucs-mail.com / accounts@ucs-mail.com </p>
+            </div>
+            <p class="generate">This is a computer generated invoice, hence no signature required
+            </p>
+            <div class="cin">
+                <h2>Unified Credit Solutions Pvt Ltd</h2>
+                <p>CIN U74899HR1995PTC088423</p>
+                <span><b>Regd. Off :</b> 7th Floor, No.-715, 721, DLF Star Tower, Sector-30, Gurgaon - 122001, Haryana, India
+                </span>
+            </div>
+            <div class="scale">
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+</body>
+
+</html>
